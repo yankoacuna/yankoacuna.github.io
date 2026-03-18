@@ -1,0 +1,667 @@
+﻿<section id="proyectos">
+    <h2 class="section-title" data-i18n="projTitle">Proyectos <span>Destacados</span></h2>
+    <p class="section-subtitle" data-i18n="projSub">Sistemas desarrollados en contextos académicos, laborales e
+        independientes.</p>
+
+    <div class="project-grid">
+
+        <!-- 1. Sistema-Visualizacion-ECG -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/svecg/vista_prediccion_1.png" alt="Sistema Visualización ECG - Predicción">
+                <span class="badge-featured">Proyecto de Titulación</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Sistema de Visualización ECG</h3>
+                    <span class="card-context">Titulación</span>
+                </div>
+                <p class="desc">Plataforma médica para la gestión de pacientes, visualización y análisis de señales
+                    ECG. Implementa un modelo de Autoencoder GRU para predicción de anomalías cardíacas y SHAP para
+                    explicabilidad de las predicciones.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Gestión de médicos, pacientes y usuarios con roles</li>
+                        <li>Visualización interactiva de señales ECG en tiempo real</li>
+                        <li>Predicción de anomalías con Autoencoder GRU entrenado en PTB-XL</li>
+                        <li>Explicabilidad de predicciones con SHAP (XAI)</li>
+                        <li>Integración con estándar HL7 FHIR mediante HAPI FHIR (Java)</li>
+                        <li>Microservicios independientes: ECG processing, anomaly detection, health management, XAI
+                            library</li>
+                        <li>API Gateway centralizado</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">React</span>
+                            <span class="tag tag-frontend">TypeScript</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / IA</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Flask</span>
+                            <span class="tag tag-backend">Python</span>
+                            <span class="tag tag-backend">PyTorch</span>
+                            <span class="tag tag-backend">WFDB</span>
+                            <span class="tag tag-ml">Autoencoder GRU</span>
+                            <span class="tag tag-ml">SHAP</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Infraestructura</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-db">PostgreSQL</span>
+                            <span class="tag tag-infra">Docker</span>
+                            <span class="tag tag-infra">HAPI FHIR (Java)</span>
+                            <span class="tag tag-infra">HL7 FHIR</span>
+                            <span class="tag tag-infra">API Gateway</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Sistema-Visualizacion-ECG" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Sistema-Gestor-de-Activos -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/sgat/dashboard.png" alt="Sistema Gestor de Activos - Dashboard">
+                <span class="badge-featured"
+                    style="background:white;padding:4px 8px;border-radius:6px;display:flex;align-items:center;">
+                    <img src="imagenes/logos/empresas_iansa.png" alt="Iansa Logo" style="height:20px;width:auto;">
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Sistema Gestor de Activos</h3>
+                    <span class="card-context">Laboral</span>
+                    <span class="card-context">Práctica I</span>
+                </div>
+                <p class="desc">Sistema desarrollado para Empresas Iansa para la gestión de activos tecnológicos.
+                    Contempló expansión independiente para clasificar activos según criterios corporativos (CIA:
+                    Confidencialidad, Integridad, Disponibilidad). Desplegado en producción sobre servidores Linux.
+                </p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Registro y gestión de activos tecnológicos de la empresa</li>
+                        <li>Clasificación de activos según criterio CIA (seguridad de la información)</li>
+                        <li>Panel de control con vistas Livewire reactivas sin recargas completas</li>
+                        <li>Exportación de reportes a Excel (Laravel Excel)</li>
+                        <li>Control de acceso por roles y permisos</li>
+                        <li>Desplegado con Nginx + PHP-FPM en servidores Linux de producción Iansa</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Stack</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Laravel</span>
+                            <span class="tag tag-backend">PHP</span>
+                            <span class="tag tag-frontend">Livewire</span>
+                            <span class="tag tag-frontend">Tailwind CSS</span>
+                            <span class="tag tag-db">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Infraestructura</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-infra">Nginx</span>
+                            <span class="tag tag-infra">Linux</span>
+                            <span class="tag tag-infra">Docker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Sistema-Gestor-de-Activos" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Sistema-Planificacion-de-Mantenimiento -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/spm/dashboard_principal.png"
+                    alt="Sistema Planificación de Mantenimiento - Dashboard">
+                <span class="badge-featured"
+                    style="background:white;padding:4px 8px;border-radius:6px;display:flex;align-items:center;">
+                    <img src="imagenes/logos/pf_alimentos.png" alt="PF Logo" style="height:20px;width:auto;">
+                </span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Sistema de Planificación de Mantenimiento</h3>
+                    <span class="card-context">Práctica II</span>
+                </div>
+                <p class="desc">Plataforma web avanzada para la digitalización del área de Mantenimiento e
+                    Ingeniería de PF Alimentos. Integrada directamente con el ERP Oracle EAM, reemplazando planillas
+                    Excel y automatizando la gestión operativa.</p>
+                <div class="features">
+                    <div class="features-title">4 Módulos Principales</div>
+                    <ul>
+                        <li>Seguimiento y control operativo con dashboard en tiempo real (semaforización de OTs)
+                        </li>
+                        <li>Planificación automática de técnicos con interfaz tipo Gantt/Calendario</li>
+                        <li>Análisis de fallas y confiabilidad (MTTR, frecuencia, comparativas interanuales)</li>
+                        <li>Control de gastos y presupuestos con alertas de desviación financiera</li>
+                        <li>Seguridad OWASP: Helmet.js, Rate Limiter, JWT, bindings SQL anti-inyección</li>
+                        <li>Exportación nativa de Excel (xlsx-js-style) y pruebas unitarias con Vitest</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">React</span>
+                            <span class="tag tag-frontend">TypeScript</span>
+                            <span class="tag tag-frontend">Vite</span>
+                            <span class="tag tag-frontend">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Node.js</span>
+                            <span class="tag tag-backend">Express</span>
+                            <span class="tag tag-backend">TypeScript</span>
+                            <span class="tag tag-backend">JWT</span>
+                            <span class="tag tag-backend">Helmet.js</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Base de datos / Infra</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-db">Oracle EAM</span>
+                            <span class="tag tag-infra">Nginx</span>
+                            <span class="tag tag-infra">Vitest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Sistema-Planificacion-de-Mantenimiento" target="_blank"><svg
+                            width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. GPS Pasivo (GPS-Pasivo + GPT-GPS-Backend) -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/gps/mapa_ubicaciones.png" alt="GPS Pasivo - Mapa de ubicaciones">
+                <span class="badge-featured">Gestión de Proyectos Tec.</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>GPS Pasivo para Mascotas (QR)</h3>
+                    <span class="card-context">Grupal · 5 personas</span>
+                </div>
+                <p class="desc">Sistema GPS pasivo para rastreo de animales mediante código QR. Al escanear el QR de
+                    la mascota, el sistema registra la ubicación del dispositivo del escáner y notifica al dueño.
+                    Desarrollado en grupo de 5 estudiantes para el curso de Gestión de Proyectos Tecnológicos.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Registro de mascotas con perfil y código QR único generado</li>
+                        <li>Escaneo de QR → captura de geolocalización → notificación al dueño</li>
+                        <li>Mapa interactivo con historial de ubicaciones reportadas</li>
+                        <li>Sistema de reportes y alertas entre usuarios</li>
+                        <li>Autenticación de usuarios con contexto de sesión</li>
+                        <li>API REST con Prisma ORM y PostgreSQL</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">React</span>
+                            <span class="tag tag-frontend">JavaScript</span>
+                            <span class="tag tag-frontend">Vite</span>
+                            <span class="tag tag-frontend">Leaflet (Mapas)</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / Infra</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Express</span>
+                            <span class="tag tag-backend">Node.js</span>
+                            <span class="tag tag-backend">Prisma ORM</span>
+                            <span class="tag tag-db">PostgreSQL</span>
+                            <span class="tag tag-infra">Servidor académico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/GPS-Pasivo-Papugrupo" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Frontend→</a>
+                    <a href="https://github.com/yankoacuna/GPT-GPS-Backend" target="_blank"><svg width="15" height="15"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Backend→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Tablero LED (GPT-Tablero-Backend + Tablero-2.0) -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/tablero/vista_principal.png" alt="Tablero LED - Vista principal">
+                <span class="badge-featured">Gestión de Proyectos Tec.</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Tablero LED con Interfaz Web</h3>
+                    <span class="card-context">Grupal · 5 personas</span>
+                </div>
+                <p class="desc">Interfaz web conectada a un tablero LED físico para proyectar mensajes
+                    personalizados. Los usuarios crean y envían mensajes desde la web, y el sistema los muestra en
+                    el tablero LED a través de comunicación con un microcontrolador Arduino. Proyecto de Gestión de
+                    Proyectos Tecnológicos (5 integrantes).</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Creación y personalización de mensajes con efectos visuales</li>
+                        <li>Comunicación entre frontend web y tablero LED vía Arduino</li>
+                        <li>Gestión de cola de mensajes y programación de envíos</li>
+                        <li>Autenticación de usuarios y control de permisos</li>
+                        <li>API REST con Prisma ORM para persistencia de mensajes</li>
+                        <li>Control de hardware Arduino integrado al sistema</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">React</span>
+                            <span class="tag tag-frontend">TypeScript</span>
+                            <span class="tag tag-frontend">Vite</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / Hardware</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Express</span>
+                            <span class="tag tag-backend">Node.js</span>
+                            <span class="tag tag-backend">Prisma ORM</span>
+                            <span class="tag tag-db">PostgreSQL</span>
+                            <span class="tag tag-infra">Arduino</span>
+                            <span class="tag tag-infra">Servidor académico</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Tablero-2.0-Papugrupo" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Frontend→</a>
+                    <a href="https://github.com/yankoacuna/GPT-Tablero-Backend" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Backend→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6. Autoencoder GRU -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/svecg/reconstruccion_autoencoder.png" alt="Autoencoder GRU para ECG">
+                <span class="badge-featured">Proyecto de Titulación</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Autoencoder GRU para ECG</h3>
+                    <span class="card-context">IA · Investigación</span>
+                </div>
+                <p class="desc">Jupyter Notebook que detalla el entrenamiento completo del modelo de detección de
+                    anomalías utilizado en el Sistema de Visualización ECG. Implementa un Autoencoder con capas GRU
+                    (Gated Recurrent Units) para detectar latidos cardíacos anómalos con umbral automático de Otsu.
+                </p>
+                <div class="features">
+                    <div class="features-title">Resultados y Características</div>
+                    <ul>
+                        <li>Entrenado con dataset PTB-XL (21,837 registros ECG clínicos)</li>
+                        <li>Umbral automático de Otsu sobre error de reconstrucción (F1: 0.926)</li>
+                        <li>Pipeline completo: filtrado Notch/Pasa Banda, detección picos R, segmentación</li>
+                        <li>Doble filtrado de pureza: Correlación + Isolation Forest</li>
+                        <li>Comparativa contra LSTM: GRU+Otsu logra Accuracy 87.5%, F1 92.6%</li>
+                        <li>Modelo pre-entrenado incluido (model_gru_otsu.pth)</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Tecnologías</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-ml">Python 3.9+</span>
+                            <span class="tag tag-ml">PyTorch</span>
+                            <span class="tag tag-ml">Scikit-learn</span>
+                            <span class="tag tag-ml">Pandas &amp; NumPy</span>
+                            <span class="tag tag-ml">WFDB</span>
+                            <span class="tag tag-ml">Matplotlib</span>
+                            <span class="tag tag-ml">Seaborn</span>
+                            <span class="tag tag-other">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Autoencoder-GRU-para-ECG" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7. Deteccion de anomalias cardiacas -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/deteccion_anomalias/graficoPCA.png" alt="Detección de Anomalías Cardíacas">
+                <span class="badge-featured">Ciencia de Datos</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Detección de Anomalías Cardíacas</h3>
+                    <span class="card-context">IA · Deportistas</span>
+                </div>
+                <p class="desc">Proyecto de Inteligencia Artificial para detectar riesgos cardíacos en deportistas
+                    de alto rendimiento a partir de señales ECG de 12 derivaciones. Clasifica ECGs como normales o
+                    de riesgo usando KNN con Dynamic Time Warping (DTW), siguiendo el Consenso Internacional de
+                    Criterios para la Interpretación del ECG en Atletas.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades y Resultados</div>
+                    <ul>
+                        <li>Clasificación binaria: ECG normal vs. de riesgo (muerte súbita cardíaca)</li>
+                        <li>KNN con DTW para comparación de señales multi-derivación de diferente longitud</li>
+                        <li>Normalización inter-base y resampleo a 500 Hz de dos datasets (NEADB + LUDB)</li>
+                        <li>Extracción de características estadísticas y análisis PCA</li>
+                        <li>Recall 100% en casos de riesgo (ningún caso cardíaco de riesgo omitido)</li>
+                        <li>Comparativa: KNN-DTW, Decision Tree, Naive Bayes, SVM y XGBoost</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Tecnologías</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-ml">Python</span>
+                            <span class="tag tag-ml">Scikit-learn</span>
+                            <span class="tag tag-ml">DTW (tslearn)</span>
+                            <span class="tag tag-ml">NumPy</span>
+                            <span class="tag tag-ml">Pandas</span>
+                            <span class="tag tag-ml">WFDB</span>
+                            <span class="tag tag-ml">Matplotlib</span>
+                            <span class="tag tag-other">Jupyter Notebook</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Deteccion-de-anomal-as-cardiacas" target="_blank"><svg
+                            width="15" height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8. G6-ProyTaller-1-2025 -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/sgha/home.png" alt="Sistema de Horarios de Atención">
+                <span class="badge-featured">Taller de Desarrollo</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Sistema de Horarios de Atención</h3>
+                    <span class="card-context">Grupal · 5 personas</span>
+                </div>
+                <p class="desc">Sistema para gestionar los horarios de atención de profesores universitarios.
+                    Permite a estudiantes realizar solicitudes de atención, y a profesores administrar su
+                    disponibilidad horaria. Desarrollado en grupo de 5 personas para el curso de Taller de
+                    Desarrollo de Software.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Gestión de horarios de disponibilidad de profesores</li>
+                        <li>Sistema de solicitudes de atención por parte de estudiantes</li>
+                        <li>Panel administrativo con vistas reactivas Livewire</li>
+                        <li>Control de roles: estudiante, profesor, administrador</li>
+                        <li>Depliegue con Docker Compose (Nginx + PHP-FPM + PostgreSQL)</li>
+                        <li>Automatización de migraciones y seeders en entrypoint.sh</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Stack</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Laravel</span>
+                            <span class="tag tag-backend">PHP</span>
+                            <span class="tag tag-frontend">Livewire</span>
+                            <span class="tag tag-frontend">Tailwind CSS</span>
+                            <span class="tag tag-db">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Infraestructura</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-infra">Docker Compose</span>
+                            <span class="tag tag-infra">Nginx</span>
+                            <span class="tag tag-infra">PHP-FPM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/IngSoftUtalca/G6-ProyTaller-1-2025" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9. Proyecto3Diseño + Mercadito-Web -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/mercadito/mercadito.png" alt="Mercadito Web + Android">
+                <span class="badge-featured">Diseño de Software</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Mercadito Web + Android</h3>
+                    <span class="card-context">Diseño + Expansión</span>
+                </div>
+                <p class="desc">Sistema de ventas de artículos con carrito de compras, desarrollado en el curso de
+                    Diseño de Software con arquitectura de microservicios. Expandido posteriormente con una
+                    aplicación Android nativa que se conecta al mismo backend. Incluye servicios independientes:
+                    catálogo, identidad y órdenes.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Catálogo de productos con búsqueda y filtros (catalog-svc)</li>
+                        <li>Autenticación y gestión de identidad de usuarios (identity-svc)</li>
+                        <li>Gestión de pedidos y carrito de compras (orders-svc)</li>
+                        <li>Interfaz web admin con Angular y TypeScript</li>
+                        <li>Aplicación Android nativa en Java con mismas APIs</li>
+                        <li>Arquitectura de microservicios con Spring Boot y Gradle</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend / Mobile</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">Angular</span>
+                            <span class="tag tag-frontend">TypeScript</span>
+                            <span class="tag tag-frontend">Android (Java)</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / Infra</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Spring Boot</span>
+                            <span class="tag tag-backend">Java</span>
+                            <span class="tag tag-backend">Gradle</span>
+                            <span class="tag tag-db">MySQL</span>
+                            <span class="tag tag-infra">Microservicios</span>
+                            <span class="tag tag-infra">REST API</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Proyecto3Dise-o" target="_blank"><svg width="15" height="15"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>v1 (web) →</a>
+                    <a href="https://github.com/yankoacuna/Mercadito-Web" target="_blank"><svg width="15" height="15"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>v2 (+Android) →</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10. Prueba-Tecnica-ISOLOGIC -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/tareas/tareas.png" alt="Gestión de Tareas">
+                <span class="badge-featured">Prueba Técnica</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3>Gestión de Tareas</h3>
+                    <span class="card-context">Prueba Técnica</span>
+                </div>
+                <p class="desc">Sistema fullstack de gestión de tareas desarrollado como prueba técnica para
+                    ISOLOGIC. Incluye autenticación JWT, CRUD completo de tareas y panel de usuario. Arquitectura
+                    moderna con NestJS en el backend y TypeORM para acceso a la base de datos.</p>
+                <div class="features">
+                    <div class="features-title">Funcionalidades</div>
+                    <ul>
+                        <li>Autenticación y registro de usuarios con JWT</li>
+                        <li>CRUD completo de tareas (crear, leer, actualizar, eliminar)</li>
+                        <li>Dashboard de tareas con filtros por estado</li>
+                        <li>Protección de rutas y validación de tokens en frontend</li>
+                        <li>Sincronización automática de esquema PostgreSQL con TypeORM</li>
+                        <li>Configuración de CORS y variables de entorno por servicio</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">React</span>
+                            <span class="tag tag-frontend">TypeScript</span>
+                            <span class="tag tag-frontend">Vite</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / Base de datos</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">NestJS</span>
+                            <span class="tag tag-backend">TypeScript</span>
+                            <span class="tag tag-backend">TypeORM</span>
+                            <span class="tag tag-backend">JWT</span>
+                            <span class="tag tag-db">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/Prueba-Tecnica-ISOLOGIC" target="_blank"><svg width="15"
+                            height="15" viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio→</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11. Monopolio -->
+        <div class="project-card">
+            <div class="project-image-wrap">
+                <img src="imagenes/monopolio/tablero.png" alt="Monopolio">
+                <span class="badge-featured" data-i18n="monopolio_context">Proyecto Universitario</span>
+            </div>
+            <div class="card-body">
+                <div class="card-header">
+                    <h3 data-i18n="monopolio_title">Monopolio</h3>
+                    <span class="card-context">Arquitectura Concurrente</span>
+                </div>
+                <p class="desc" data-i18n="monopolio_desc">Juego de mesa Monopolio multijugador con arquitectura
+                    concurrente. Utiliza hilos para soportar partidas en tiempo real. Creado colaborativamente por
+                    un equipo de 5 personas.</p>
+                <div class="features">
+                    <div class="features-title" data-i18n="monopolio_featTitle">Características principales</div>
+                    <ul>
+                        <li data-i18n="monopolio_f1">Multijugador en tiempo real con ejecución concurrente.</li>
+                        <li data-i18n="monopolio_f2">Manejo de reglas de Monopolio (propiedades, pagos, turnos).</li>
+                        <li data-i18n="monopolio_f3">Persistencia del estado del juego en MongoDB.</li>
+                    </ul>
+                </div>
+                <div class="tech-section">
+                    <div class="tech-group">
+                        <div class="tech-group-label">Frontend</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-frontend">Vue.js</span>
+                            <span class="tag tag-frontend">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="tech-group">
+                        <div class="tech-group-label">Backend / Base de datos</div>
+                        <div class="tech-tags">
+                            <span class="tag tag-backend">Node.js</span>
+                            <span class="tag tag-backend">JavaScript</span>
+                            <span class="tag tag-db">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/yankoacuna/monopolio-app" target="_blank"><svg width="15" height="15"
+                            viewBox="0 0 24 24" fill="currentColor"
+                            style="flex-shrink:0;vertical-align:middle;margin-right:5px">
+                            <path
+                                d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                        </svg>Ver repositorio</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
