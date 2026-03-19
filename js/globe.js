@@ -4,9 +4,9 @@ window.initGlobe = function () {
     if (!container || typeof Globe === 'undefined') return;
 
     const points = [
-        { lat: -35.43, lng: -71.65, label: 'Talca, Chile',         info: 'PF Alimentos · Universidad de Talca',  color: '#4f8ef7', size: 0.6 },
-        { lat: -33.41, lng: -70.57, label: 'Las Condes, Santiago', info: 'Empresas Iansa (x2)',                  color: '#3fb950', size: 0.6 },
-        { lat:  37.09, lng: -95.71, label: 'EE.UU. (Remoto)',      info: 'Outlier AI — RLHF Specialist',        color: '#a78bfa', size: 0.5 }
+        { lat: -35.43, lng: -71.65, label_es: 'Talca, Chile',         label_en: 'Talca, Chile',         info: 'PF Alimentos · Universidad de Talca',  color: '#4f8ef7', size: 0.6 },
+        { lat: -33.41, lng: -70.57, label_es: 'Las Condes, Santiago', label_en: 'Las Condes, Santiago', info: 'Empresas Iansa (x2)',                  color: '#3fb950', size: 0.6 },
+        { lat:  37.09, lng: -95.71, label_es: 'EE.UU. (Remoto)',      label_en: 'USA (Remote)',         info: 'Outlier AI — RLHF Specialist',        color: '#a78bfa', size: 0.5 }
     ];
 
     const arcs = [
@@ -20,12 +20,15 @@ window.initGlobe = function () {
         .pointsData(points)
         .pointLat('lat').pointLng('lng').pointColor('color')
         .pointRadius('size').pointAltitude(0.06)
-        .pointLabel(d => `
+        .pointLabel(d => {
+            const currentLang = (typeof lang !== 'undefined') ? lang : 'es';
+            const locName = currentLang === 'en' ? d.label_en : d.label_es;
+            return `
             <div style="background:rgba(13,17,23,0.92);border:1px solid rgba(79,142,247,0.4);border-radius:8px;padding:10px 14px;font-family:Inter,sans-serif;min-width:160px;">
-                <div style="font-weight:700;color:#e6edf3;font-size:0.9rem;margin-bottom:4px;">${d.label}</div>
+                <div style="font-weight:700;color:#e6edf3;font-size:0.9rem;margin-bottom:4px;">${locName}</div>
                 <div style="color:#8b949e;font-size:0.8rem;">${d.info}</div>
             </div>
-        `)
+        `})
         .arcsData(arcs)
         .arcStartLat('startLat').arcStartLng('startLng')
         .arcEndLat('endLat').arcEndLng('endLng')

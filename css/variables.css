@@ -1,0 +1,40 @@
+:root {
+    --bg-primary: #0d1117;
+    --bg-secondary: #161b22;
+    --bg-card: #1c2230;
+    --bg-card-hover: #212a3e;
+    --accent: #4f8ef7;
+    --accent-glow: rgba(79, 142, 247, 0.25);
+    --accent-2: #a78bfa;
+    --green: #3fb950;
+    --orange: #f0883e;
+    --red: #f85149;
+    --cyan: #39d353;
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #6e7681;
+    --border: rgba(255, 255, 255, 0.08);
+    --border-hover: rgba(79, 142, 247, 0.6);
+    --radius: 14px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.65;
+    font-size: 15px;
+}

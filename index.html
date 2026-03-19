@@ -11,6 +11,9 @@
     <meta property="og:description"
         content="Egresado de Ingeniería Civil en Computación especializado en Full Stack y Data Science.">
     <meta property="og:image" content="https://yankoacuna.cl/imagenes/preview.png">
+    <meta name="description"
+        content="Software Engineer specialized in Full Stack systems, industrial digitalization and AI applications.">
+    <meta name="keywords" content="Software Engineer, Full Stack, React, Node, AI, Chile">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yanko Acuña | Ingeniero Civil en Computación">
@@ -20,7 +23,12 @@
         rel="stylesheet">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' fill='%234f8ef7' font-family='Inter, sans-serif' font-weight='bold'>YA</text></svg>">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/timeline.css">
 </head>
 
 <body>
@@ -29,6 +37,7 @@
     <nav class="top-nav">
         <a class="nav-brand" href="#">Yanko <span>Acuña</span></a>
         <ul class="nav-links">
+            <li><a href="#educacion" data-i18n="nav_edu">Educación</a></li>
             <li><a href="#experiencia" data-i18n="nav_exp">Experiencia</a></li>
             <li><a href="#proyectos" data-i18n="nav_proj">Proyectos</a></li>
             <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
@@ -60,13 +69,25 @@
                 </svg>
                 GitHub
             </a>
-            <a href="mailto:contacto@yankoacuna.cl">
+            <a href="mailto:contacto@yankoacuna.cl" style="padding-right: 0.5rem;" title="Enviar un correo">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                     stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
                     <polyline points="2,4 12,13 22,4" />
                 </svg>
                 contacto@yankoacuna.cl
+                <span
+                    onclick="event.preventDefault(); const btn = this; navigator.clipboard.writeText('contacto@yankoacuna.cl').then(()=>{ btn.style.color='var(--green)'; setTimeout(()=>btn.style.color='', 2000); })"
+                    title="Copiar al portapapeles"
+                    style="margin-left: 0.2rem; padding: 0.35rem; border-radius: 4px; display: flex; align-items: center; cursor: pointer; transition: all 0.2s; background: rgba(255,255,255,0.06);"
+                    onmouseover="this.style.color='var(--accent)'; this.style.background='rgba(79, 142, 247, 0.15)';"
+                    onmouseout="this.style.color=''; this.style.background='rgba(255,255,255,0.06)';">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                </span>
             </a>
         </div>
         <div class="cv-links">
@@ -90,6 +111,9 @@
             </a>
         </div>
     </header>
+
+    <!-- ═══ EDUCATION ═════════════════════════════════════════════════ -->
+    <div id="educacion-placeholder"></div>
 
     <!-- ═══ EXPERIENCE ════════════════════════════════════════════════ -->
     <div id="experiencia-placeholder"></div>
