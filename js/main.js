@@ -116,7 +116,7 @@ function toggleLang() {
 }
 
 async function loadComponents() {
-    const components = ['experiencia', 'proyectos', 'habilidades'];
+    const components = ['experiencia', 'proyectos', 'habilidades', 'globo'];
     for (const comp of components) {
         try {
             const res = await fetch(`components/${comp}.html`);
@@ -132,6 +132,11 @@ async function loadComponents() {
         }
     }
     applyLanguage();
+
+    // Init globe after component is in the DOM (globe.gl + globe.js loaded via index.html)
+    if (typeof window.initGlobe === 'function') {
+        window.initGlobe();
+    }
 }
 
 document.addEventListener('DOMContentLoaded', loadComponents);
