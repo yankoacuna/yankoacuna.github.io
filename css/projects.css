@@ -46,7 +46,6 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    background: var(--accent);
     color: white;
     font-size: 0.7rem;
     font-weight: 700;
@@ -276,7 +275,7 @@
 }
 
 .badge-research {
-    background: #8b5cf6;
+    background: #6b38c9;
     display: flex;
     align-items: center;
     color: white !important;
@@ -472,9 +471,11 @@
 
 .filter-btn.active {
     background: var(--accent);
-    color: #ffffff;
+    color: #051633;
+    /* Dark navy for contrast against bright blue */
     border-color: var(--accent);
     box-shadow: 0 0 15px var(--accent-glow);
+    font-weight: 800;
 }
 
 /* ─── SISTEMA DE CARGA PROGRESIVA ─── */

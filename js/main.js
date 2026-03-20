@@ -321,8 +321,8 @@ let lang = 'es';
  */
 function applyLanguage() {
     document.getElementById('langBtn').innerHTML = lang === 'es'
-        ? '<img src="https://flagcdn.com/20x15/es.png" alt="ES" width="20" height="15"> ES'
-        : '<img src="https://flagcdn.com/20x15/gb.png" alt="UK" width="20" height="15"> EN';
+        ? '<img src="https://flagcdn.com/w40/es.png" alt="" aria-hidden="true" width="20" height="15"> ES'
+        : '<img src="https://flagcdn.com/w40/gb.png" alt="" aria-hidden="true" width="20" height="15"> EN';
     document.documentElement.lang = lang;
 
     const cvEsBtn = document.getElementById('cv-es-btn');
