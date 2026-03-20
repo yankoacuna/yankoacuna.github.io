@@ -320,9 +320,11 @@ let lang = 'es';
  * APLICAR IDIOMA
  */
 function applyLanguage() {
-    document.getElementById('langBtn').innerHTML = lang === 'es'
-        ? '<img src="https://flagcdn.com/w40/es.png" alt="" aria-hidden="true" width="20" height="15"> ES'
-        : '<img src="https://flagcdn.com/w40/gb.png" alt="" aria-hidden="true" width="20" height="15"> EN';
+    const langTextElem = document.getElementById('langText');
+    if (langTextElem) {
+        langTextElem.textContent = lang.toUpperCase();
+    }
+
     document.documentElement.lang = lang;
 
     const cvEsBtn = document.getElementById('cv-es-btn');
@@ -334,7 +336,9 @@ function applyLanguage() {
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.dataset.i18n;
-        if (T[lang][key] !== undefined) el.innerHTML = T[lang][key];
+        if (T[lang] && T[lang][key] !== undefined) {
+            el.innerHTML = T[lang][key];
+        }
     });
 }
 

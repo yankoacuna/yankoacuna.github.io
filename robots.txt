@@ -13,4 +13,7 @@ Disallow: /
 User-agent: Anthropic-ai
 Disallow: /
 
+User-agent: Googlebot-Image
+Disallow: /imagenes
+
 Sitemap: https://yankoacuna.cl/sitemap.xml

@@ -167,7 +167,7 @@ function processCommand(cmd) {
             break;
         case 'whoami':
             printLine('Yanko Acuña Villaseca');
-            printLine('Full Stack Developer & Data Science enthusiastic.');
+            printLine('Full Stack Developer & Data Science enthusiast.');
             printLine('Passionate about scalable architectures, microservices, and industrial digitalization.');
             break;
         case 'skills':

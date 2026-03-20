@@ -18,14 +18,15 @@
     <meta property="og:title" content="Yanko Acuña Villaseca | Ingeniería y Software">
     <meta property="og:description"
         content="Portafolio profesional de Yanko Acuña, Ingeniero Civil en Computación especializado en IA y Full Stack.">
-    <meta property="og:image" content="https://yankoacuna.cl/imagenes/preview.png">
+    <meta property="og:image" content="https://yankoacuna.cl/imagenes/preview.webp">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Yanko Acuña | Ingeniero Civil en Computación">
-    <meta name="twitter:image" content="https://yankoacuna.cl/imagenes/preview.png">
+    <meta name="twitter:image" content="https://yankoacuna.cl/imagenes/preview.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
@@ -50,21 +51,34 @@
     </noscript>
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Yanko Acuña Villaseca",
-      "jobTitle": "Ingeniero Civil en Computación",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Talca",
-        "addressCountry": "CL"
-      },
-      "url": "https://yankoacuna.cl",
-      "sameAs": [
-        "https://www.linkedin.com/in/yanko-acuna-villaseca",
-        "https://github.com/yankoacuna"
-      ],
-      "knowsAbout": ["Software Engineering", "Full Stack Development", "Data Science"]
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+            "@type": "Person",
+            "@id": "https://yankoacuna.cl/#person",
+            "name": "Yanko Acuña Villaseca",
+            "jobTitle": "Ingeniero Civil en Computación",
+            "url": "https://yankoacuna.cl",
+            "sameAs": [
+                "https://www.linkedin.com/in/yanko-acuna-villaseca",
+                "https://github.com/yankoacuna"
+            ],
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Talca",
+                "addressRegion": "Maule",
+                "addressCountry": "CL"
+            },
+            "knowsAbout": ["Software Engineering", "Full Stack Development", "Data Science", "Artificial Intelligence"]
+            },
+            {
+            "@type": "WebSite",
+            "@id": "https://yankoacuna.cl/#website",
+            "url": "https://yankoacuna.cl",
+            "name": "Yanko Acuña Villaseca | Portafolio Profesional",
+            "publisher": { "@id": "https://yankoacuna.cl/#person" }
+            }
+        ]
     }
     </script>
 </head>
@@ -79,16 +93,23 @@
             <li><a href="#proyectos" data-i18n="nav_proj">Proyectos</a></li>
             <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
         </ul>
-        <button class="lang-btn" onclick="toggleLang()" id="langBtn">
-            <img src="https://flagcdn.com/w40/es.png" alt="ES" width="20" height="15"> ES
+        <button class="lang-btn" onclick="toggleLang()" id="langBtn" aria-label="Cambiar idioma / Change language">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px; vertical-align: middle;">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                </path>
+            </svg>
+            <span id="langText" style="font-weight: 600; font-size: 0.85rem;">ES</span>
         </button>
     </nav>
 
     <header class="hero">
         <p class="subtitle" data-i18n="subtitle">Ingeniero Civil en Computación</p>
         <h1>Yanko Acuña Villaseca</h1>
-        <p data-i18n="heroDesc">Full Stack Developer & Data Science enthusiastic. Especializado en arquitecturas
-            escalables, IA aplicada y digitalización industrial.</p>
+        <p data-i18n="heroDesc">Ingeniero Civil en Computación con Minor en Ciencia de Datos. Especializado en
+            desarrollo Full Stack y entrenamiento de modelos de IA.</p>
 
         <div class="social-links">
             <a href="https://www.linkedin.com/in/yanko-acuna-villaseca" target="_blank">
