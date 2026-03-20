@@ -9,7 +9,7 @@
     <meta name="description"
         content="Ingeniero Civil en Computación y Desarrollador Full Stack en Talca, Chile. Especialista en IA, Ciencia de Datos y Digitalización Industrial.">
     <meta name="keywords"
-        content="Yanko Acuña, Yanko Acuña Villaseca, Ingeniero Civil en Computación, Desarrollador de Software Talca, Full Stack Developer, Data Science, Machine Learning Chile">
+        content="Yanko Acuña Villaseca, Yanko Acuña, Ingeniero Civil en Computación, Ingeniero Civil Informático Talca, Desarrollador de Software Talca, Full Stack Developer Chile, Data Science Talca">
     <meta name="author" content="Yanko Acuña Villaseca">
     <link rel="canonical" href="https://yankoacuna.cl/">
 
@@ -24,16 +24,28 @@
     <meta name="twitter:title" content="Yanko Acuña | Ingeniero Civil en Computación">
     <meta name="twitter:image" content="https://yankoacuna.cl/imagenes/preview.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='80' fill='%234f8ef7' font-family='Inter, sans-serif' font-weight='bold'>YA</text></svg>">
+    <link rel="preload" href="css/variables.css" as="style">
+    <link rel="preload" href="css/base.css" as="style">
+    <link rel="preload" href="css/layout.css" as="style">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/skills.css">
-    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="css/projects.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/skills.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="css/timeline.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="css/projects.css">
+        <link rel="stylesheet" href="css/skills.css">
+        <link rel="stylesheet" href="css/timeline.css">
+    </noscript>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -44,12 +56,14 @@
         "@type": "PostalAddress",
         "addressLocality": "Talca",
         "addressCountry": "Chile"
+        "addressCountry": "CL"
       },
       "url": "https://yankoacuna.cl",
       "sameAs": [
         "https://www.linkedin.com/in/yanko-acuna-villaseca",
         "https://github.com/yankoacuna"
       ]
+        "knowsAbout": ["Software Engineering", "Full Stack Development", "Data Science"]
     }
     </script>
 </head>
@@ -65,7 +79,7 @@
             <li><a href="#habilidades" data-i18n="nav_skills">Habilidades</a></li>
         </ul>
         <button class="lang-btn" onclick="toggleLang()" id="langBtn">
-            <img src="https://flagcdn.com/20x15/es.png" alt="ES"> ES
+            <img src="https://flagcdn.com/20x15/es.png" alt="ES" width="20" height="15"> ES
         </button>
     </nav>
 
@@ -128,20 +142,21 @@
         </div>
     </header>
 
-    <div id="educacion-placeholder"></div>
-    <div id="experiencia-placeholder"></div>
-    <div id="proyectos-placeholder"></div>
-    <div id="habilidades-placeholder"></div>
-    <div id="globo-placeholder"></div>
+    <!-- CONTENEDOR PRINCIPAL: Previene CLS empujando el footer fuera del viewport inicial -->
+    <main style="min-height: 100vh;">
+        <div id="educacion-placeholder"></div>
+        <div id="experiencia-placeholder"></div>
+        <div id="proyectos-placeholder"></div>
+        <div id="habilidades-placeholder"></div>
+        <div id="globo-placeholder"></div>
+    </main>
 
     <footer>
-        <p>© 2026 <a href="mailto:contacto@yankoacuna.cl">Yanko Acuña Villaseca</a> — Talca, Chile</p>
+        <p>© 2026 <a href="#" id="footer-mail">Yanko Acuña Villaseca</a> — Talca, Chile</p>
     </footer>
 
-    <script src="js/globe.gl.min.js"></script>
-    <script src="js/globe.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/terminal.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/terminal.js" defer></script>
 
 </body>
 

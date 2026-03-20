@@ -321,8 +321,8 @@ let lang = 'es';
  */
 function applyLanguage() {
     document.getElementById('langBtn').innerHTML = lang === 'es'
-        ? '<img src="https://flagcdn.com/20x15/es.png" alt="ES"> ES'
-        : '<img src="https://flagcdn.com/20x15/gb.png" alt="UK"> EN';
+        ? '<img src="https://flagcdn.com/20x15/es.png" alt="ES" width="20" height="15"> ES'
+        : '<img src="https://flagcdn.com/20x15/gb.png" alt="UK" width="20" height="15"> EN';
     document.documentElement.lang = lang;
 
     const cvEsBtn = document.getElementById('cv-es-btn');
@@ -364,13 +364,32 @@ async function loadComponents() {
     }
     applyLanguage();
 
-    // Inicializar Globo si existe la función
-    if (typeof window.initGlobe === 'function') {
-        window.initGlobe();
+    // Iniciar carga en demanda (lazy) del Globo 3D al hacer scroll
+    const globeSection = document.getElementById('globe-section');
+    if (globeSection) {
+        const globeObserver = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                globeObserver.disconnect();
+                const s1 = document.createElement('script');
+                s1.src = 'js/globe.gl.min.js';
+                s1.onload = () => {
+                    const s2 = document.createElement('script');
+                    s2.src = 'js/globe.js';
+                    s2.onload = () => { if (typeof globalThis.initGlobe === 'function') globalThis.initGlobe(); };
+                    document.body.appendChild(s2);
+                };
+                document.body.appendChild(s1);
+            }
+        }, { rootMargin: '400px' });
+        globeObserver.observe(globeSection);
     }
 
     // Activar ScrollSpy después de cargar componentes
     setTimeout(setupScrollSpy, 500);
+
+    // Bypass de Cloudflare para Ofuscación de Email (evita descarga de email-decode.min.js)
+    const fMail = document.getElementById('footer-mail');
+    if (fMail) fMail.href = 'mailto:contacto' + '@' + 'yankoacuna.cl';
 }
 
 document.addEventListener('DOMContentLoaded', loadComponents);

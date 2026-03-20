@@ -1,5 +1,5 @@
 // globe.js — exposes window.initGlobe() for main.js to call after component injection
-window.initGlobe = function () {
+globalThis.initGlobe = function () {
     const container = document.getElementById('globe-container');
     if (!container || typeof Globe === 'undefined') return;
 
@@ -14,8 +14,11 @@ window.initGlobe = function () {
         { startLat: -33.41, startLng: -70.57, endLat: -35.43, endLng: -71.65, color: ['#3fb950', '#4f8ef7'] }
     ];
 
-    const globe = Globe()(container)
-        .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
+    requestAnimationFrame(() => {
+        const cw = container.clientWidth || 480;
+
+        const globe = Globe()(container)
+            .globeImageUrl('//unpkg.com/three-globe/example/img/earth-dark.jpg')
         .backgroundImageUrl('//unpkg.com/three-globe/example/img/night-sky.png')
         .pointsData(points)
         .pointLat('lat').pointLng('lng').pointColor('color')
@@ -34,7 +37,7 @@ window.initGlobe = function () {
         .arcEndLat('endLat').arcEndLng('endLng')
         .arcColor('color').arcAltitude(0.25).arcStroke(0.5)
         .arcDashLength(0.4).arcDashGap(0.2).arcDashAnimateTime(2000)
-        .width(container.clientWidth || 480).height(480)
+        .width(cw).height(480)
         .atmosphereColor('#4f8ef7').atmosphereAltitude(0.12);
 
     globe.controls().autoRotate = true;
@@ -56,7 +59,10 @@ window.initGlobe = function () {
         });
     });
 
-    window.addEventListener('resize', () => {
-        globe.width(container.clientWidth || 480).height(480);
+    globalThis.addEventListener('resize', () => {
+        requestAnimationFrame(() => {
+            globe.width(container.clientWidth || 480).height(480);
+        });
+    });
     });
 };
