@@ -502,3 +502,13 @@ function scrollToProject(id) {
         }, 2000);
     }, 200);
 }
+
+// Función para copiar email al portapapeles
+function copyEmail(element) {
+    event.preventDefault();
+    navigator.clipboard.writeText('contacto@yankoacuna.cl').then(() => {
+        const originalBg = element.style.background;
+        element.style.background = 'var(--green)';
+        setTimeout(() => { element.style.background = originalBg; }, 1500);
+    });
+}
