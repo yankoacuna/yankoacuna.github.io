@@ -1,0 +1,48 @@
+<section id="contacto" class="section">
+    <div class="section-titular">
+        <h2 data-i18n="contactTitle">Contacto <span>Directo</span></h2>
+        <p data-i18n="contactSub"
+            style="max-width: 600px; margin: 0 auto; color: var(--text-secondary); text-align: center; font-size: 1rem;">
+            Envíame un mensaje para colaborar en nuevos proyectos o discutir oportunidades profesionales.</p>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-glass-card">
+            <form id="contactForm" class="contact-form" action="https://formsubmit.co/133004df0878810044f163df48f5d6ee"
+                method="POST">
+                <!-- Redirección de formsubmit -->
+                <input type="hidden" name="_next" value="https://yankoacuna.cl/">
+                <input type="hidden" name="_subject" value="Nuevo Mensaje - yankoacuna.cl">
+                <input type="hidden" name="_captcha" value="true">
+                <input type="hidden" name="_template" value="box">
+
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name" data-i18n="contactName">Nombre Completo</label>
+                    <div class="input-highlight"></div>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email" data-i18n="contactEmail">Correo Electrónico</label>
+                    <div class="input-highlight"></div>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+                    <label for="message" data-i18n="contactMessage">Tu mensaje...</label>
+                    <div class="input-highlight"></div>
+                </div>
+
+                <button type="submit" class="contact-submit-btn">
+                    <span data-i18n="contactSubmit">Enviar Mensaje</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>

@@ -13,6 +13,7 @@ const T = {
         nav_proj: 'Proyectos',
         nav_skills: 'Habilidades',
         nav_edu: 'Educación',
+        nav_contact: 'Contacto',
 
         // Educación
         eduTitle: 'Educación <span>Académica</span>',
@@ -157,7 +158,17 @@ const T = {
         btn_demo: 'Demo',
         btn_arch: 'Arquitectura',
         load_more: 'Ver Más Proyectos',
-        hide_projects: 'Ver Menos Proyectos'
+        hide_projects: 'Ver Menos Proyectos',
+
+        // Contacto
+        contactTitle: 'Contacto <span>Directo</span>',
+        contactSub: 'Envíame un mensaje para colaborar en nuevos proyectos o discutir oportunidades profesionales.',
+        contactName: 'Nombre Completo',
+        contactEmail: 'Correo Electrónico',
+        contactMessage: 'Tu mensaje...',
+        contactSubmit: 'Enviar Mensaje',
+        contactSuccess: '¡Mensaje enviado con éxito!',
+        contactError: 'Ocurrió un error al enviar el mensaje. Inténtalo de nuevo.'
     },
     en: {
         // Hero & Nav
@@ -169,6 +180,7 @@ const T = {
         nav_proj: 'Projects',
         nav_skills: 'Skills',
         nav_edu: 'Education',
+        nav_contact: 'Contact',
 
         // Education
         eduTitle: 'Academic <span>Education</span>',
@@ -310,7 +322,17 @@ const T = {
         hide_projects: 'Show Less Projects',
         langTitle: 'Languages',
         lang_es: 'Spanish (Native)',
-        lang_en: 'English (B2)'
+        lang_en: 'English (B2)',
+
+        // Contacto
+        contactTitle: 'Direct <span>Contact</span>',
+        contactSub: 'Send me a message to collaborate on new projects or discuss professional opportunities.',
+        contactName: 'Full Name',
+        contactEmail: 'Email Address',
+        contactMessage: 'Your message...',
+        contactSubmit: 'Send Message',
+        contactSuccess: 'Message sent successfully!',
+        contactError: 'An error occurred while sending the message. Please try again.'
     }
 };
 
@@ -351,7 +373,7 @@ function toggleLang() {
  * CARGA DE COMPONENTES EXTERNOS
  */
 async function loadComponents() {
-    const components = ['educacion', 'experiencia', 'proyectos', 'habilidades', 'globo'];
+    const components = ['educacion', 'experiencia', 'proyectos', 'habilidades', 'contacto', 'globo'];
     for (const comp of components) {
         try {
             const res = await fetch(`components/${comp}.html`);

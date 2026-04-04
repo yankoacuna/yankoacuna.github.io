@@ -1,0 +1,155 @@
+/* ─── CONTACT FORM STYLES ─────────────────────────── */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+}
+
+.contact-glass-card {
+    background: rgba(28, 34, 48, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-glass-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 20px var(--accent-glow);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    position: relative;
+    width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem 1rem;
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+/* Scrollbar para el textarea */
+.form-group textarea::-webkit-scrollbar {
+    width: 8px;
+}
+.form-group textarea::-webkit-scrollbar-thumb {
+    background: var(--border-hover);
+    border-radius: 4px;
+}
+
+.form-group label {
+    position: absolute;
+    top: 1.2rem;
+    left: 1.2rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    background: transparent;
+    padding: 0 0.2rem;
+}
+
+/* Floating label effect */
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:not(:placeholder-shown),
+.form-group textarea:not(:placeholder-shown) {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:not(:placeholder-shown) + label {
+    top: -0.6rem;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: var(--bg-primary); /* Blend with the background of the input slightly */
+    border-radius: 4px;
+}
+
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s ease, left 0.3s ease;
+    border-radius: 0 0 8px 8px;
+}
+
+.form-group input:focus ~ .input-highlight,
+.form-group textarea:focus ~ .input-highlight {
+    width: 100%;
+    left: 0;
+}
+
+.contact-submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    margin-top: 0.5rem;
+}
+
+.contact-submit-btn:hover {
+    background: #3a75d1;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(92, 154, 255, 0.4);
+}
+
+.contact-submit-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.contact-submit-btn:hover svg {
+    transform: translate(3px, -3px) scale(1.1);
+}
+
+.contact-submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(92, 154, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+    .contact-glass-card {
+        padding: 1.5rem;
+    }
+}
