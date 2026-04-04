@@ -370,6 +370,26 @@ function toggleLang() {
 }
 
 /**
+ * LÓGICA DE TEMA (Claro/Oscuro)
+ */
+function initTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersLight = globalThis.matchMedia('(prefers-color-scheme: light)').matches;
+
+    if (savedTheme === 'light' || (!savedTheme && systemPrefersLight)) {
+        document.body.classList.add('light-theme');
+    }
+}
+
+function toggleTheme() {
+    const isLight = document.body.classList.toggle('light-theme');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+
+// Inicializar tema
+initTheme();
+
+/**
  * CARGA DE COMPONENTES EXTERNOS
  */
 async function loadComponents() {

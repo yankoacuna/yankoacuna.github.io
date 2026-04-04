@@ -24,12 +24,18 @@ globalThis.initGlobe = function () {
         .pointLat('lat').pointLng('lng').pointColor('color')
         .pointRadius('size').pointAltitude(0.06)
         .pointLabel(d => {
-            const currentLang = (typeof lang !== 'undefined') ? lang : 'es';
+            const currentLang = (typeof lang === 'undefined') ? 'es' : lang;
             const locName = currentLang === 'en' ? d.label_en : d.label_es;
+            const isLight = document.body.classList.contains('light-theme');
+            const bgColor = isLight ? 'rgba(255, 255, 255, 0.95)' : 'rgba(13, 17, 23, 0.92)';
+            const textColor = isLight ? '#1e293b' : '#e6edf3';
+            const borderColor = isLight ? 'rgba(37, 99, 235, 0.4)' : 'rgba(79, 142, 247, 0.4)';
+            const subColor = isLight ? '#475569' : '#8b949e';
+            
             return `
-            <div style="background:rgba(13,17,23,0.92);border:1px solid rgba(79,142,247,0.4);border-radius:8px;padding:10px 14px;font-family:Inter,sans-serif;min-width:160px;">
-                <div style="font-weight:700;color:#e6edf3;font-size:0.9rem;margin-bottom:4px;">${locName}</div>
-                <div style="color:#8b949e;font-size:0.8rem;">${d.info}</div>
+            <div style="background:${bgColor}; border:1px solid ${borderColor}; border-radius:8px; padding:10px 14px; font-family:Inter,sans-serif; min-width:160px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                <div style="font-weight:700; color:${textColor}; font-size:0.9rem; margin-bottom:4px;">${locName}</div>
+                <div style="color:${subColor}; font-size:0.8rem;">${d.info}</div>
             </div>
         `})
         .arcsData(arcs)
